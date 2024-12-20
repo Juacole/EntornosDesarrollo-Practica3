@@ -1,18 +1,38 @@
+/**
+ * Clase enfocada a la manipulacion de arrays.
+ *
+ * @author Joaquin Puchuri Tunjar
+ * @version 1.0
+ */
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class MiVector {
+
     private int[] v;
     private int tam;
+
+    /**
+     * Constructor que inicializa el objeto a traves de un parametro.
+     * @param a que inicializa el tamaño del array.
+     */
     public MiVector(int a){
         tam=a;
         v = new int [tam];
     }
 
+    /**
+     * Metodo que verifica si el array tiene un tamaño.
+     * @return tam devuelve true o false en funcion a si tam tiene un valor.
+     */
     public boolean arrayInicio(){
         return tam==0;
     }
 
+    /**
+     * Metodo que le pide al usuario que ingrese los elementos del array en funcion al tamaño del array.
+     */
     public void tamanioArray(){
         Scanner scan = new Scanner(System.in);
         for(int i=0; i<tam; i++){
@@ -21,6 +41,8 @@ public class MiVector {
         }
     }
 
+    /**Metodo que imprime por pantalla los elementos del array.
+     */
     public void printArray(){
         System.out.println("\nEl array resultante es: ");
         for(int i=0; i<tam; i++){
@@ -29,10 +51,14 @@ public class MiVector {
         System.out.println();
     }
 
+    /**Metodo que imprime por pantalla el tamaño actual del array.
+     */
     public void printTamanio(){
         System.out.println("\nEl tamaño de nuestro array es de: " + tam);
     }
 
+    /**Metodo que reinicia el array de forma que se eliminen todos sus elementos y se elimine el tamaño del mismo.
+     */
     public void destructor(){
         tam=0;
         System.out.println("\nNuestro array ha sido destruido, contiene una cantidad de " + tam + " valores.");
