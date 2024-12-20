@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+
 public class MiVector {
     private int[] v;
     private int tam;
